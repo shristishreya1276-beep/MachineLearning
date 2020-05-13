@@ -17,4 +17,20 @@ First of all we need to craete a variable that will contain the dataset.
 We will simply call it dataframe and dataframe will contain data in a partcular format called dataframe which will have elements in the same rows and column format. 
 dataset = pd.read_cvs('Name of csv file with .csv extension') # used for importing the dataset.
 Features -- the data that is dependent and is used for making the predictions. 
+Depended variable is as name suggests is the result we want to predict based on the features. 
+Now we need to define our x and y datasets to start with the model. 
+So, for defining x we need to include everything except .the last column as it contains dependent variable and rest of it contain  independent variables or features that are used for training the dataset. 
+x = dataset.iloc[:,:-1].values # So iloc can be expanded to locate index now for the particular indeces we need everything except last column so use :,:-1 for acheiving it.
+y = dataset.iloc[:, -1].values 
+
+Now you also need to upload dataset to colab to read it. In order to do this you simply click to folder icon on the leftmost portion and then click on upload button and select the required datastet from your computer system. 
+
+print(x)
+print(y)
+To display the dataframes. :)
+
+#### Step 3: 
+
+
+
 
