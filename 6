@@ -1,9 +1,34 @@
 Simple Linear Regression
 
 Defining independent and independent variable, y = b0 + b1x. The best fitting line looks for the least squared difference between the predicted and the actual value. 
-Follow the general steps of importing the libraries, uploading the dataset, and split in train-test dataset. 
+1) Follow the general steps of importing the libraries, uploading the dataset, and split in train-test dataset. 
 
-Now the next step is training a linear model. 
+2) Now the next step is training a linear model. 
 from sklearn.linear_model import LinearRegression
 new = LinearRegression()
 new.fit(x_train, y_train)
+
+3) Predict the test set results
+y_predict = new.predict(x_train)
+
+4) Visualising the test and training results
+
+Test results:
+plt.scatter(x_train, y_train, color = 'red')
+plt.plot(x_train, new.predict(x_train), color = 'black')
+plt.title("Training dataset")
+plt.xlabel('Years of experience')
+plt.ylabel('Salary')
+plt.show()
+
+Similarly for test results. 
+plt.scatter(x_test, y_test, color = 'red')
+plt.plot(x_test, new.predict(x_test), color = 'black')
+plt.title("Test Dataset")
+plt.xlabel('Years of experience')
+plt.ylabel('Salary')
+plt.show()
+
+
+
+
