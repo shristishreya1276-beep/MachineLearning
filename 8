@@ -1,0 +1,18 @@
+Polynomial regression:
+
+Why is polynomial regression still considered a linear regression. When we are talking about linear and non-linera regression, we really don't talk about the independent factor x but we talk about the coefficients(weights) i.e b value and to be called a linear regression we check whether it can be expressed as expression as linear equation by replaing the coefficients. 
+
+Implementation:
+
+1) The first few steps would be exactly same i.e data preprocessing. Importing the dataset and then building a linear regression model. 
+
+2) Now comes applying the polynomial regression part:
+So, the technique we are following is that we are first making a linear model and then we are applying the polynomial(power) feature to the x part of the of the linear regression. 
+
+from sklearn.preprocessing import PolynomialFeatures #Importing the modules
+new1 = PolynomialFeatures(degree = 3) #Defining the value of n i.e the degree till which we want.
+x1 = new1.fit_transform(x) #Fitting and transforming the x
+new2 = LinearRegression() # Making the new linear model with changed characteristics
+new2.fit(x1,y) #Finally fitting in the polynomial model
+
+Now we will try to plot and visualize it. 
